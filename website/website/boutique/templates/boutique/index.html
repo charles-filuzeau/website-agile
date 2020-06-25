@@ -1,17 +1,91 @@
+{% load static %}
 
-<div>
-  <h1> Welcome to our website </h1>
-</div>
+<link rel="stylesheet" type="text/css" href="{% static 'boutique/homepage.css' %}">
 
-<button> click me </button>
-<div>
-{% if user_list %}
-    <ul>
-    {% for user in user_list %}
-        <li>{{ user }}</li>
-    {% endfor %}
+
+<ul footer=top>
+  <li><a href="default.asp">Home</a></li>
+  <li><a href="news.asp">Assessment</a></li>
+  <li><a href="contact.asp">Training</a></li>
+  <li><a href="about.asp">Coaching</a></li>
+  <li><a href="about.asp">Ressources</a></li>
+</ul>
+
+
+<body>
+  <div type=about-us>
+    <h1 type="whitetext-top"> About us </h1>
+    <h4 type="whitetext"> Who are we ? <br /> What do we do ? </h4>
+  </div>
+
+
+
+  <div>
+    <h2> Our services </h2>
+    <div> Assessment </div>
+    <p> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
+      quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
+      eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. </p>
+    <div> Trainings </div>
+    <p> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+      voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed
+      quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. </p>
+    <div> Coaching </div>
+    <p> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+      voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed
+      quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. </p>
+  </div>
+
+
+  <div>
+    <h2> About us </h2>
+    <div> who are we </div>
+    <p> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
+      quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
+      eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. </p>
+    <div> what we do </div>
+    <p> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
+      quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
+      eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. </p>
+    <div> Contact us </div>
+    <p> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
+      quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
+      eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. </p>
+  </div>
+
+
+
+  <div>
+    <h2> Our partners </h2>
+    <div> Safe </div>
+    <div> Scrum Alliance </div>
+    <div> Scrum.org </div>
+  </div>
+
+
+  <div type=inspirations>
+    <h2> Get inspired </h2>
+    <div>
+      {% if inspiration_list %}
+      <ul>
+        {% for inspiration in inspiration_list %}
+        <li>"{{ inspiration.text  }}" - {{ inspiration.user }}</li>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <p>No inspiration are available.</p>
+      {% endif %}
+    </div>
+  </div>
+
+  <div>
+    <ul footer=bottom>
+      <li><a href="default.asp">Home</a></li>
+      <li><a href="news.asp">Assessment</a></li>
+      <li><a href="contact.asp">Training</a></li>
+      <li><a href="about.asp">Coaching</a></li>
+      <li><a href="about.asp">Ressources</a></li>
     </ul>
-{% else %}
-    <p>No users are available.</p>
-{% endif %}
-</div>
+  </div>
+
+</body>
