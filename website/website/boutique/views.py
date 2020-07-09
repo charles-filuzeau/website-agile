@@ -9,6 +9,15 @@ def index(request):
     context = {'user_list': user_list, 'inspiration_list' : inspiration_list}
     return render(request, 'boutique/index.html', context)
 
+def trainings(request):
+    course_list = Course.objects.all()
+    context = {'course_list': course_list}
+    return render(request, 'boutique/trainings.html', context)
+
+def course(request, name):
+    course = Course.objects.get(course_name=name)
+    context = {'course': course}
+    return render(request, 'boutique/course.html', context)
 
 def detail(request, question_id):
     return HttpResponse("You're looking at question %s." % question_id)

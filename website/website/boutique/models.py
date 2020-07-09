@@ -1,19 +1,19 @@
 from django.db import models
 
 # Create your models here.
-class Course(models.Model):
-    course_name = models.CharField(max_length=200)
-    pub_date = models.DateTimeField('date published')
-    def __str__(self):
-        return self.course_name
-
-
 class User(models.Model):
     user_name = models.CharField(max_length=50)
     password = models.CharField(max_length=50)
     title = models.CharField(max_length=20)
     def __str__(self):
         return self.user_name
+
+class Course(models.Model):
+    course_name = models.CharField(max_length=200)
+    json = models.CharField(max_length=3000, null=True)
+    instructor = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+    def __str__(self):
+        return self.course_name
 
 
 class Formation(models.Model):

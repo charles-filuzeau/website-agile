@@ -1,0 +1,42 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'boutique/trainings.css' %}">
+
+
+<ul footer=top>
+  <li><a href="index">Home</a></li>
+  <li><a href="about">Assessment</a></li>
+  <li><a href="trainings">Training</a></li>
+  <li><a href="about">Coaching</a></li>
+  <li><a href="about">Ressources</a></li>
+</ul>
+
+
+<body>
+
+  <div type=inspirations>
+    <h2> Find your training </h2>
+    <div>
+      {% if course_list %}
+      <ul>
+        {% for course in course_list %}
+        <li><a href="/boutique/course/{{ course.course_name }}/">{{ course }} </a></li>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <p>No course are available.</p>
+      {% endif %}
+    </div>
+  </div>
+
+  <div>
+    <ul footer=bottom>
+      <li><a href="default.asp">Home</a></li>
+      <li><a href="news.asp">Assessment</a></li>
+      <li><a href="contact.asp">Training</a></li>
+      <li><a href="about.asp">Coaching</a></li>
+      <li><a href="about.asp">Ressources</a></li>
+    </ul>
+  </div>
+
+</body>

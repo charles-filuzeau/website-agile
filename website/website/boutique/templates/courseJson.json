@@ -1,0 +1,10 @@
+{
+  "description": "Little description of the course...",
+  "who_for": "This course is for people who want to know more about agile ....",
+  "what_in_it": "In this course, you will find ...",
+  "modules": [
+    ["Project planing", "This modude will teach you..."],
+    ["Team working", "This modude will teach you..."],
+    ["Agile dev", "This modude will teach you..."]
+  ]
+}

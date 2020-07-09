@@ -1,9 +1,11 @@
-from django.conf.urls import url
+from django.urls import path
 
 from . import views
 
 urlpatterns = [
-    url(r'^$', views.index, name='index'),
+    path('', views.index, name='index'),
+    path('index', views.index, name='index'),
+    path('trainings', views.trainings, name='trainings'),
         # ex: /polls/5/
-    url(r'^(?P<question_id>[0-9]+)/$', views.detail, name='detail'),
+    path('course/<str:name>/', views.course, name='course'),
 ]
