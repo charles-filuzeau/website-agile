@@ -3,6 +3,7 @@ from django.http import HttpResponse
 
 from .models import Course, User, Formation, Inspiration
 
+
 def index(request):
     user_list = User.objects.all()
     inspiration_list = Inspiration.objects.all()
@@ -18,6 +19,3 @@ def course(request, name):
     course = Course.objects.get(course_name=name)
     context = {'course': course}
     return render(request, 'boutique/course.html', context)
-
-def detail(request, question_id):
-    return HttpResponse("You're looking at question %s." % question_id)

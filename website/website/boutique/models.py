@@ -10,7 +10,7 @@ class User(models.Model):
 
 class Course(models.Model):
     course_name = models.CharField(max_length=200)
-    json = models.CharField(max_length=3000, null=True)
+    json = models.CharField(max_length=20000, null=True)
     instructor = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     def __str__(self):
         return self.course_name

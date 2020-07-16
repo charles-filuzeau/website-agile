@@ -1,6 +1,6 @@
 {% load static %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'boutique/trainings.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'boutique/course.css' %}">
 
 
 <ul footer=top>
@@ -14,25 +14,81 @@
 
 <body>
 
-  <div type=inspirations>
-    <h2> Find your training </h2>
-    <div>
-      {% if course %}
-      {{course.json}}
-      {% else %}
-      <p>No course are available.</p>
-      {% endif %}
-    </div>
-  </div>
-
   <div>
-    <ul footer=bottom>
-      <li><a href="default.asp">Home</a></li>
-      <li><a href="news.asp">Assessment</a></li>
-      <li><a href="contact.asp">Training</a></li>
-      <li><a href="about.asp">Coaching</a></li>
-      <li><a href="about.asp">Ressources</a></li>
-    </ul>
-  </div>
+
+    <div type=image-container>
+      <div type=presentation-container>
+        <h2> Training name </h2>
+        <h4 id="description"> </h4>
+        <h4 id="price"> Price: $500 </h4>
+      </div>
+    </div>
+
+    <button type="register"> Register Now </button>
+
+
+    <div type="border_div">
+      <div type="left-div">
+        <h3> Who is this Course for ?</h3>
+        <div id="who_for"></div>
+      </div>
+
+      <div type="right-div">
+        <h3> What's in this Course ?</h3>
+        <div id="what_in_it"></div>
+      </div>
+    </div>
+
+
+    <div type="border_div">
+      <h3 type="title-center"> What You will Learn </h3>
+
+      <div type="module1">
+        <div id="module1"> </div>
+        <div id="module1_desc"> </div>
+      </div>
+
+      <div type="module2">
+        <div id="module2"> </div>
+        <div id="module2_desc"> </div>
+      </div>
+
+      <div type="module3">
+       <div id="module3"> </div>
+       <div id="module3_desc"> </div>
+      </div>
+    </div>
+
+
+    {% if course %}
+    <script>
+      var json = {{ course.json | safe }}
+      console.log(json)
+      document.getElementById('description').innerHTML += json.description;
+      document.getElementById('who_for').innerHTML += json.who_for;
+      document.getElementById('what_in_it').innerHTML += json.what_in_it;
+
+      document.getElementById('module1').innerHTML += json.modules[0][0];
+      document.getElementById('module1_desc').innerHTML += json.modules[0][1];
+      document.getElementById('module2').innerHTML += json.modules[1][0];
+      document.getElementById('module2_desc').innerHTML += json.modules[1][1];
+      document.getElementById('module3').innerHTML += json.modules[2][0];
+      document.getElementById('module3_desc').innerHTML += json.modules[2][1];
+    </script>
+    {% else %}
+    <p>No course are available.</p>
+    {% endif %}
+
+
+
+    <div>
+      <ul footer=bottom>
+        <li><a href="default.asp">Home</a></li>
+        <li><a href="news.asp">Assessment</a></li>
+        <li><a href="contact.asp">Training</a></li>
+        <li><a href="about.asp">Coaching</a></li>
+        <li><a href="about.asp">Ressources</a></li>
+      </ul>
+    </div>
 
 </body>
