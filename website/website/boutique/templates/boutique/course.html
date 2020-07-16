@@ -5,10 +5,10 @@
 
 <ul footer=top>
   <li><a href="/boutique/index">Home</a></li>
-  <li><a href="about">Assessment</a></li>
+  <li><a href="/boutique/assessment">Assessment</a></li>
   <li><a href="/boutique/trainings">Training</a></li>
-  <li><a href="about">Coaching</a></li>
-  <li><a href="about">Ressources</a></li>
+  <li><a href="/boutique/calendar">Calendar</a></li>
+  <li><a href="/boutique/consulting">Consulting</a></li>
 </ul>
 
 
@@ -18,9 +18,9 @@
 
     <div type=image-container>
       <div type=presentation-container>
-        <h2> Training name </h2>
+        <h2 id="title"> </h2>
         <h4 id="description"> </h4>
-        <h4 id="price"> Price: $500 </h4>
+        <h4 id="price"> Price: </h4>
       </div>
     </div>
 
@@ -64,7 +64,9 @@
     <script>
       var json = {{ course.json | safe }}
       console.log(json)
+      document.getElementById('title').innerHTML += json.name;
       document.getElementById('description').innerHTML += json.description;
+      document.getElementById('price').innerHTML += json.price;
       document.getElementById('who_for').innerHTML += json.who_for;
       document.getElementById('what_in_it').innerHTML += json.what_in_it;
 
@@ -83,11 +85,11 @@
 
     <div>
       <ul footer=bottom>
-        <li><a href="default.asp">Home</a></li>
-        <li><a href="news.asp">Assessment</a></li>
-        <li><a href="contact.asp">Training</a></li>
-        <li><a href="about.asp">Coaching</a></li>
-        <li><a href="about.asp">Ressources</a></li>
+        <li><a href="/boutique/index">Home</a></li>
+        <li><a href="/boutique/assessment">Assessment</a></li>
+        <li><a href="/boutique/trainings">Training</a></li>
+        <li><a href="/boutique/calendar">Calendar</a></li>
+        <li><a href="/boutique/consulting">Consulting</a></li>
       </ul>
     </div>
 

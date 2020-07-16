@@ -46,3 +46,104 @@ li a {
   padding: 8px;
   background-color: #dddddd;
 }
+
+h2[type=title-center] {
+  width: 100%;
+  text-align: center;
+  padding-top: 30px;
+}
+
+div[type=container] {
+  display: inline-block;
+  width: 80%;
+  margin-top: 30px;
+  margin-left: 10%;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: grey;
+}
+
+div[type=image-container] {
+  float: left;
+  border-radius: 10px;
+  height: 250px;
+  width: 30%;
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  background-size: 100%;
+}
+
+div[type=about-background] {
+  background-color: #daeaff;
+  width: 100%;
+  padding-top: 20px;
+  margin-top: 60px;
+  padding-bottom: 60px;
+}
+
+div[type=question] {
+  display: inline-block;
+  margin-top: 60px;
+}
+
+div[type=question-left] {
+  float: left;
+  width: 15%;
+  margin-left: 5%;
+}
+
+div[type=answer-right] {
+  float: left;
+  width: 65%;
+  margin-left: 10%;
+}
+
+div[service=assessment] {
+  background-image: url("/static/boutique/assessment_image.png");
+}
+
+div[service=trainings] {
+  background-image: url("/static/boutique/trainings_image.png");
+}
+
+div[service=coaching] {
+  background-image: url("/static/boutique/coaching_image.png");
+}
+
+div[type=text-container] {
+  float: left;
+  margin-left: 2%;
+  margin-right: 2%;
+  border-radius: 10px;
+  width: 65%;
+}
+
+div[type=partner-name] {
+  float: left;
+  width: 33%;
+  text-align: center;
+  padding-top: 30px;
+  font-weight: bold;
+}
+
+img[type=safe-image] {
+  float: left;
+  width: 8%;
+  margin-left: 12.5%;
+  margin-top: 15px;
+}
+
+img[type=csm-image] {
+  float: left;
+  width: 8%;
+  margin-left: 25%;
+  margin-top: 10px;
+}
+
+img[type=scrum-image] {
+  float: left;
+  width: 9%;
+  margin-top: 30px;
+  margin-left: 25%;
+}
