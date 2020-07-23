@@ -38,6 +38,7 @@ div[type=presentation-container] {
   display: inline-block;
   padding-left: 1%;
   padding-right: 1%;
+  max-width: 30%;
 }
 
 button[type="register"] {
@@ -75,22 +76,14 @@ h3[type=title-center] {
   text-align: center;
 }
 
-div[type=module1] {
+div[type=module] {
   float: left;
   margin-left: 10%;
   width: 20%;
 }
 
-div[type=module2] {
-  float: left;
-  margin-left: 10%;
-  width: 20%;
-}
-
-div[type=module3] {
-  float: left;
-  margin-left: 10%;
-  width: 20%;
+div[type=module-name] {
+  font-weight: bold;
 }
 
 

@@ -3,6 +3,47 @@ ul[footer=top] {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  width: 100%;
+  height: 10%;
+}
+
+li[type=top-list] {
+  float: left;
+  margin-left: 5%;
+  padding-top: 1.5%;
+  font-size: 3vh;
+}
+
+li a {
+  display: block;
+  text-decoration: none;
+  color: #3b4754;
+}
+
+img[type=logo-image-top] {
+  float: left;
+  width: 5%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+input[type=search] {
+  float: left;
+  width: 13%;
+  height: 5vh;
+  margin-top: 1.1%;
+  margin-left: 10%;
+  padding-left: 10px;
+  border:solid 2px #ccc;
+  border-radius: 30px;
+  font-size: 2vh;
+}
+
+img[type=profil-image] {
+  float: left;
+  width: 3%;
+  margin-left: 5%;
+  margin-top: 0.8%;
 }
 
 ul[footer=bottom] {
@@ -10,6 +51,8 @@ ul[footer=bottom] {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  width: 100%;
+  height: 10%;
 }
 
 div[type=inspirations] {
@@ -18,12 +61,12 @@ div[type=inspirations] {
 }
 
 div[type=about-us] {
-  /*background-image: url({% static "boutique/image1.png" %}) */
   background-image: url("/static/boutique/image2.png");
   background-repeat: no-repeat;
   background-position: 100% 0;
   background-size: 100%;
   height: 500px;
+  margin-top: -15px;
 }
 
 [type=whitetext-top] {
@@ -35,16 +78,6 @@ div[type=about-us] {
 [type=whitetext] {
   color: white;
   margin-left: 30px;
-}
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  padding: 8px;
-  background-color: #dddddd;
 }
 
 h2[type=title-center] {
@@ -146,4 +179,33 @@ img[type=scrum-image] {
   width: 9%;
   margin-top: 30px;
   margin-left: 25%;
+}
+
+li[type=review] {
+  float: none;
+}
+
+img[type=logo-image-bottom] {
+  float: left;
+  width: 5%;
+  margin-left: 2%;
+  margin-right: 6%;
+}
+
+li[type=bottom-list] {
+  float: left;
+  margin-left: 8%;
+  padding-top: 1.5%;
+  font-size: 3vh;
+}
+
+li[position=last] {
+  margin-right: 10%;
+}
+
+img[type=social-image] {
+  float: left;
+  width: 2%;
+  margin-left: 1%;
+  margin-top: 1%;
 }
