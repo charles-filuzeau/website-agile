@@ -4,14 +4,14 @@
 
 
 <ul footer=top>
-  <img src="/static/boutique/logo.png" alt="" type="logo-image-top">
+  <img src="/static/boutique/images/logo.png" alt="" type="logo-image-top">
   <li type="top-list"><a href="/boutique/index">Home</a></li>
   <li type="top-list"><a href="/boutique/assessment">Assessment</a></li>
   <li type="top-list"><a href="/boutique/trainings">Training</a></li>
   <li type="top-list"><a href="/boutique/calendar">Calendar</a></li>
   <li type="top-list"><a href="/boutique/consulting">Consulting</a></li>
   <input type="search" placeholder="Search..">
-  <img src="/static/boutique/profil.png" alt="" type="profil-image">
+  <img src="/static/boutique/images/profil.png" alt="" type="profil-image">
 </ul>
 
 
@@ -96,46 +96,63 @@
 
 
 
-  <div>
+  <div type="partner-container">
     <h2 type="title-center"> Our Partners </h2>
     <div>
       <div type="partner-name"><a href="https://www.scaledagile.com/"> Safe </a></div>
       <div type="partner-name"><a href="https://www.scrumalliance.org/"> Scrum Alliance </a></div>
       <div type="partner-name"><a href="https://www.scrum.org/"> Scrum.org </a></div>
-      <img src="/static/boutique/safe_image.png" alt="" type="safe-image">
-      <img src="/static/boutique/csm_image.png" alt="" type="csm-image">
-      <img src="/static/boutique/scrum_image.png" alt="" type="scrum-image">
+      <img src="/static/boutique/images/safe_image.png" alt="" type="safe-image">
+      <img src="/static/boutique/images/csm_image.png" alt="" type="csm-image">
+      <img src="/static/boutique/images/scrum_image.png" alt="" type="scrum-image">
     </div>
 
   </div>
 
-  <div style="clear:both;"></div>
-
-  <div type=inspirations>
-    <h2 type="title-center"> Get Inspired </h2>
+  <div type="border-div"></div>
+  <h2 type="title-center"> Get Inspired </h2>
+  <div type="get-inspired-container">
     <div>
       {% if inspiration_list %}
-      <ul>
-        {% for inspiration in inspiration_list %}
-        <li type="review">"{{ inspiration.text  }}" - {{ inspiration.user }}</li>
-        {% endfor %}
-      </ul>
+      {% for inspiration in inspiration_list %}
+      <div type="review-container">
+        <div type="review-text"><strong>{{ inspiration.title }} </strong><br>"{{inspiration.text }}"</div>
+        <img src="/static/boutique/images/user.png" alt="" type="user-image">
+        <div type="review-user"><strong>{{ inspiration.user }}</strong> <br> Current employee</div>
+      </div>
+      {% endfor %}
       {% else %}
       <p>No inspiration are available.</p>
       {% endif %}
     </div>
   </div>
 
+
+
+  <div type="newsletter-container">
+    <h2 type="title-center"> Subscribe to our Newletter </h2>
+    <div type="newsletter-text"> Get the latest product updates, company news and special offers delivered right in your inbox </div>
+    <div type="newsletter-mail">
+      <input type="email" placeholder="Enter your email">
+      <button type="email"> SUBSCRIBRE </button>
+    </div>
+  </div>
+
+
+
+
+
+
   <div>
     <ul footer=bottom>
-      <img src="/static/boutique/logo.png" alt="" type="logo-image-bottom">
+      <img src="/static/boutique/images/logo.png" alt="" type="logo-image-bottom">
       <li type="bottom-list"><a href="/boutique/index">About us</a></li>
       <li type="bottom-list"><a href="/boutique/assessment">Contact us</a></li>
       <li type="bottom-list"><a href="/boutique/trainings">Join us</a></li>
       <li type="bottom-list" position="last"><a href="/boutique/calendar">Terms & Conditions</a></li>
-      <img src="/static/boutique/twitter.png" alt="" type="social-image">
-      <img src="/static/boutique/instagram.png" alt="" type="social-image">
-      <img src="/static/boutique/facebook.png" alt="" type="social-image">
+      <img src="/static/boutique/images/twitter.png" alt="" type="social-image">
+      <img src="/static/boutique/images/instagram.png" alt="" type="social-image">
+      <img src="/static/boutique/images/facebook.png" alt="" type="social-image">
     </ul>
   </div>
 

@@ -5,6 +5,8 @@ from . import views
 urlpatterns = [
     path('', views.index, name='index'),
     path('index', views.index, name='index'),
+    path('assessment',views.assessment, name='assessment'),
     path('trainings', views.trainings, name='trainings'),
     path('course/<str:name>/', views.course, name='course'),
+    path('consulting',views.consulting, name='consulting'),
 ]

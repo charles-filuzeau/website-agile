@@ -2,95 +2,110 @@
 
 <link rel="stylesheet" type="text/css" href="{% static 'boutique/course.css' %}">
 
-
 <ul footer=top>
-  <li><a href="/boutique/index">Home</a></li>
-  <li><a href="/boutique/assessment">Assessment</a></li>
-  <li><a href="/boutique/trainings">Training</a></li>
-  <li><a href="/boutique/calendar">Calendar</a></li>
-  <li><a href="/boutique/consulting">Consulting</a></li>
+  <img src="/static/boutique/images/logo.png" alt="" type="logo-image-top">
+  <li type="top-list"><a href="/boutique/index">Home</a></li>
+  <li type="top-list"><a href="/boutique/assessment">Assessment</a></li>
+  <li type="top-list"><a href="/boutique/trainings">Training</a></li>
+  <li type="top-list"><a href="/boutique/calendar">Calendar</a></li>
+  <li type="top-list"><a href="/boutique/consulting">Consulting</a></li>
+  <input type="search" placeholder="Search..">
+  <img src="/static/boutique/images/profil.png" alt="" type="profil-image">
 </ul>
 
 
 <body>
 
+  <div type=image-container>
+    <div type=presentation-container>
+      <h2 id="title"> </h2>
+      <h4 id="description"> </h4>
+      <h4 id="price"> Price: </h4>
+    </div>
+  </div>
+
+  <button type="register"> Register Now </button>
+
+
+  <div type="border_div">
+    <div type="left-div">
+      <h3> Who is this Course for ?</h3>
+      <div id="who_for"></div>
+    </div>
+
+    <div type="right-div">
+      <h3> What's in this Course ?</h3>
+      <div id="what_in_it"></div>
+    </div>
+  </div>
+
+
+  <div type="border_div">
+    <h3 type="title-center"> What You will Learn </h3>
+
+    <div type="module">
+      <img src="/static/boutique/images/lightbulb.png" type="light">
+      <div id="module1" type="module-name"> </div>
+      <div id="module1_desc"> </div>
+    </div>
+
+    <div type="module">
+      <img src="/static/boutique/images/lightbulb.png" type="light">
+      <div id="module2" type="module-name"> </div>
+      <div id="module2_desc"> </div>
+    </div>
+
+    <div type="module">
+      <img src="/static/boutique/images/lightbulb.png" type="light">
+      <div id="module3" type="module-name"> </div>
+      <div id="module3_desc"> </div>
+    </div>
+  </div>
+
+
+  <div type="instructor-container">
+    <div type="left-container">
+    </div>
+
+    <div type="right-container">
+      </div>
+  </div>
+
+
+  {% if course %}
+  <script>
+    var json = {{ course.json | safe }}
+    console.log(json)
+    document.getElementById('title').innerHTML += json.name;
+    document.getElementById('description').innerHTML += json.description;
+    document.getElementById('price').innerHTML += json.price;
+    document.getElementById('who_for').innerHTML += json.who_for;
+    document.getElementById('what_in_it').innerHTML += json.what_in_it;
+
+    document.getElementById('module1').innerHTML += json.modules[0][0];
+    document.getElementById('module1_desc').innerHTML += json.modules[0][1];
+    document.getElementById('module2').innerHTML += json.modules[1][0];
+    document.getElementById('module2_desc').innerHTML += json.modules[1][1];
+    document.getElementById('module3').innerHTML += json.modules[2][0];
+    document.getElementById('module3_desc').innerHTML += json.modules[2][1];
+  </script>
+  {% else %}
+  <p>No course are available.</p>
+  {% endif %}
+
+
+
   <div>
-
-    <div type=image-container>
-      <div type=presentation-container>
-        <h2 id="title"> </h2>
-        <h4 id="description"> </h4>
-        <h4 id="price"> Price: </h4>
-      </div>
-    </div>
-
-    <button type="register"> Register Now </button>
-
-
-    <div type="border_div">
-      <div type="left-div">
-        <h3> Who is this Course for ?</h3>
-        <div id="who_for"></div>
-      </div>
-
-      <div type="right-div">
-        <h3> What's in this Course ?</h3>
-        <div id="what_in_it"></div>
-      </div>
-    </div>
-
-
-    <div type="border_div">
-      <h3 type="title-center"> What You will Learn </h3>
-
-      <div type="module">
-        <div id="module1" type="module-name"> </div>
-        <div id="module1_desc"> </div>
-      </div>
-
-      <div type="module">
-        <div id="module2" type="module-name"> </div>
-        <div id="module2_desc"> </div>
-      </div>
-
-      <div type="module">
-       <div id="module3" type="module-name"> </div>
-       <div id="module3_desc"> </div>
-      </div>
-    </div>
-
-
-    {% if course %}
-    <script>
-      var json = {{ course.json | safe }}
-      console.log(json)
-      document.getElementById('title').innerHTML += json.name;
-      document.getElementById('description').innerHTML += json.description;
-      document.getElementById('price').innerHTML += json.price;
-      document.getElementById('who_for').innerHTML += json.who_for;
-      document.getElementById('what_in_it').innerHTML += json.what_in_it;
-
-      document.getElementById('module1').innerHTML += json.modules[0][0];
-      document.getElementById('module1_desc').innerHTML += json.modules[0][1];
-      document.getElementById('module2').innerHTML += json.modules[1][0];
-      document.getElementById('module2_desc').innerHTML += json.modules[1][1];
-      document.getElementById('module3').innerHTML += json.modules[2][0];
-      document.getElementById('module3_desc').innerHTML += json.modules[2][1];
-    </script>
-    {% else %}
-    <p>No course are available.</p>
-    {% endif %}
-
-
-
-    <div>
-      <ul footer=bottom>
-        <li><a href="/boutique/index">Home</a></li>
-        <li><a href="/boutique/assessment">Assessment</a></li>
-        <li><a href="/boutique/trainings">Training</a></li>
-        <li><a href="/boutique/calendar">Calendar</a></li>
-        <li><a href="/boutique/consulting">Consulting</a></li>
-      </ul>
-    </div>
+    <ul footer=bottom>
+      <img src="/static/boutique/images/logo.png" alt="" type="logo-image-bottom">
+      <li type="bottom-list"><a href="/boutique/index">About us</a></li>
+      <li type="bottom-list"><a href="/boutique/assessment">Contact us</a></li>
+      <li type="bottom-list"><a href="/boutique/trainings">Join us</a></li>
+      <li type="bottom-list" position="last"><a href="/boutique/calendar">Terms & Conditions</a></li>
+      <img src="/static/boutique/images/twitter.png" alt="" type="social-image">
+      <img src="/static/boutique/images/instagram.png" alt="" type="social-image">
+      <img src="/static/boutique/images/facebook.png" alt="" type="social-image">
+    </ul>
+  </div>
 
 </body>

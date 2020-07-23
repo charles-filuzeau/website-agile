@@ -47,13 +47,71 @@ img[type=profil-image] {
   margin-top: 0.8%;
 }
 
-
-/*  TRAININGS */
-div[type=trainings-container] {
-  display: inline-block;
-  margin: 60px;
+/* WHY ASSESSMENT */
+div[type=why-assessment] {
+  background-color: #daeaff;
+  width: 100%;
+  margin-top: 30px;
+  overflow: hidden;
 }
 
+h2[type=left-title] {
+    margin: 5%;
+    margin-bottom: 0;
+    width: 90%;
+}
+
+div[type=assessment-text] {
+  margin: 5%;
+  margin-top: 2%;
+  width: 90%;
+}
+
+/* TYPES OF ASSESSMENTS */
+div[type=assessment-type] {
+  margin-bottom: 50px;
+}
+div[type=assessment-container] {
+  display: inline-block;
+  width: 80%;
+  margin-top: 30px;
+  margin-left: 10%;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: grey;
+  background-color: #daeaff;
+}
+
+div[type=image-container] {
+  float: left;
+  border-radius: 10px;
+  height: 250px;
+  width: 30%;
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  background-size: 100%;
+}
+
+div[service=assessment] {
+  background-image: url("/static/boutique/images/assessment_image.png");
+}
+
+div[service=trainings] {
+  background-image: url("/static/boutique/images/trainings_image.png");
+}
+
+div[service=coaching] {
+  background-image: url("/static/boutique/images/coaching_image.png");
+}
+
+div[type=text-container] {
+  float: left;
+  margin-left: 2%;
+  margin-right: 2%;
+  border-radius: 10px;
+  width: 65%;
+}
 
 
 /* BOTTOM FOTTER */

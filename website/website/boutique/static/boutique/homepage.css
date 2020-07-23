@@ -1,3 +1,4 @@
+/* TOP FOOTER */
 ul[footer=top] {
   list-style-type: none;
   margin: 0;
@@ -34,7 +35,7 @@ input[type=search] {
   margin-top: 1.1%;
   margin-left: 10%;
   padding-left: 10px;
-  border:solid 2px #ccc;
+  border: solid 2px #ccc;
   border-radius: 30px;
   font-size: 2vh;
 }
@@ -46,20 +47,7 @@ img[type=profil-image] {
   margin-top: 0.8%;
 }
 
-ul[footer=bottom] {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  width: 100%;
-  height: 10%;
-}
-
-div[type=inspirations] {
-  display: inline-block;
-  margin-bottom: 30px;
-}
-
+/* ABOUT US */
 div[type=about-us] {
   background-image: url("/static/boutique/image2.png");
   background-repeat: no-repeat;
@@ -86,6 +74,7 @@ h2[type=title-center] {
   padding-top: 30px;
 }
 
+/* IMAGE CONTAINERS */
 div[type=container] {
   display: inline-block;
   width: 80%;
@@ -107,6 +96,28 @@ div[type=image-container] {
   background-size: 100%;
 }
 
+
+div[service=assessment] {
+  background-image: url("/static/boutique/assessment_image.png");
+}
+
+div[service=trainings] {
+  background-image: url("/static/boutique/trainings_image.png");
+}
+
+div[service=coaching] {
+  background-image: url("/static/boutique/coaching_image.png");
+}
+
+div[type=text-container] {
+  float: left;
+  margin-left: 2%;
+  margin-right: 2%;
+  border-radius: 10px;
+  width: 65%;
+}
+
+/* QUESTIONS */
 div[type=about-background] {
   background-color: #daeaff;
   width: 100%;
@@ -132,26 +143,11 @@ div[type=answer-right] {
   margin-left: 10%;
 }
 
-div[service=assessment] {
-  background-image: url("/static/boutique/assessment_image.png");
-}
 
-div[service=trainings] {
-  background-image: url("/static/boutique/trainings_image.png");
+/* PARTNERS */
+div[type=partner-container] {
+  overflow: hidden;
 }
-
-div[service=coaching] {
-  background-image: url("/static/boutique/coaching_image.png");
-}
-
-div[type=text-container] {
-  float: left;
-  margin-left: 2%;
-  margin-right: 2%;
-  border-radius: 10px;
-  width: 65%;
-}
-
 div[type=partner-name] {
   float: left;
   width: 33%;
@@ -181,8 +177,100 @@ img[type=scrum-image] {
   margin-left: 25%;
 }
 
-li[type=review] {
-  float: none;
+/* REVIEWS */
+div[type=border-div] {
+  border-top-width: 1px;
+  border-top-color: grey;
+  border-top-style: solid;
+  margin-top: 50px;
+  display: flow-root;
+  clear: both;
+}
+div[type=get-inspired-container] {
+  margin-bottom: 30px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+div[type=review-container] {
+  display: inline-block;
+  width: 40%;
+  border: solid 2px #ccc;
+  border-radius: 10px;
+}
+
+div[type=review-text] {
+  font-style: italic;
+  width: 80%;
+  margin: 5%;
+  word-wrap: break-word;
+  white-space: break-spaces;
+}
+
+img[type=user-image] {
+  width: 15%;
+  margin: 5%;
+  float: left;
+}
+
+div[type=review-user] {
+  margin-top: 7%;
+  margin-right: 5%;
+  margin-bottom: 5%;
+  float: left;
+
+}
+
+
+/* NEWLETTER */
+div[type=newsletter-container] {
+  background-color: #daeaff;
+  width: 100%;
+  padding-top: 20px;
+  margin-top: 60px;
+  padding-bottom: 60px;
+  overflow: hidden;
+}
+
+div[type=newsletter-text] {
+  text-align: center;
+  margin-left: 30%;
+  width: 40%;
+}
+
+input[type=email] {
+  float: left;
+  width: 20%;
+  height: 6vh;
+  margin-top: 3%;
+  margin-left: 33%;
+  padding-left: 10px;
+  border: solid 2px #ccc;
+  border-radius: 10px;
+  font-size: 3vh;
+}
+
+button[type=email] {
+  float: left;
+  margin-top: 3%;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: black;
+  border-style: none;
+  color: white;
+  font-size: 2vh;
+  margin-left: 3%;
+}
+
+/* BOTTOM FOTTER */
+ul[footer=bottom] {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 10%;
 }
 
 img[type=logo-image-bottom] {
