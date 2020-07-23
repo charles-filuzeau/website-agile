@@ -21,7 +21,8 @@ def trainings(request):
 
 def course(request, name):
     course = Course.objects.get(course_name=name)
-    context = {'course': course}
+    inspiration_list = Inspiration.objects.all()
+    context = {'course': course, 'inspiration_list' : inspiration_list}
     return render(request, 'boutique/course.html', context)
 
 def consulting(request):

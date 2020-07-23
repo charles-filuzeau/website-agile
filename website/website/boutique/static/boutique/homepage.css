@@ -49,7 +49,7 @@ img[type=profil-image] {
 
 /* ABOUT US */
 div[type=about-us] {
-  background-image: url("/static/boutique/image2.png");
+  background-image: url("/static/boutique/images/image2.png");
   background-repeat: no-repeat;
   background-position: 100% 0;
   background-size: 100%;
@@ -98,15 +98,15 @@ div[type=image-container] {
 
 
 div[service=assessment] {
-  background-image: url("/static/boutique/assessment_image.png");
+  background-image: url("/static/boutique/images/assessment_image.png");
 }
 
 div[service=trainings] {
-  background-image: url("/static/boutique/trainings_image.png");
+  background-image: url("/static/boutique/images/trainings_image.png");
 }
 
 div[service=coaching] {
-  background-image: url("/static/boutique/coaching_image.png");
+  background-image: url("/static/boutique/images/coaching_image.png");
 }
 
 div[type=text-container] {
@@ -219,7 +219,6 @@ div[type=review-user] {
   margin-right: 5%;
   margin-bottom: 5%;
   float: left;
-
 }
 
 
