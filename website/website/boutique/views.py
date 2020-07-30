@@ -25,6 +25,10 @@ def course(request, name):
     context = {'course': course, 'inspiration_list' : inspiration_list}
     return render(request, 'boutique/course.html', context)
 
+def calendar(request):
+    context = {}
+    return render(request, 'boutique/calendar.html', context)
+
 def consulting(request):
     context = {}
     return render(request, 'boutique/consulting.html', context)

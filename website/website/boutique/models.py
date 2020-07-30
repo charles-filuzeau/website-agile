@@ -29,6 +29,23 @@ class Inspiration(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=30)
     text = models.CharField(max_length=500)
+    pub_date = models.DateTimeField('%Y-%m-%d')
+    def __str__(self):
+        return str(self.title) + ' ' + str(self.user)
+
+class CourseReview(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    course = models.ForeignKey(Course, on_delete=models.CASCADE)
+    title = models.CharField(max_length=30)
+    text = models.CharField(max_length=500)
     pub_date = models.DateTimeField('date published')
     def __str__(self):
         return str(self.title) + ' ' + str(self.user)
+
+class CourseInstance(models.Model):
+    course = models.ForeignKey(Course, on_delete=models.CASCADE)
+    date = models.DateTimeField('%Y-%m-%d')
+    location = models.CharField(max_length=500)
+    image_name = models.CharField(max_length=50)
+    def __str__(self):
+        return str(self.course) + ' ' + str(self.date)

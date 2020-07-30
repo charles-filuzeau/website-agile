@@ -1,0 +1,94 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'boutique/calendar.css' %}">
+
+
+<ul footer=top>
+  <img src="/static/boutique/images/logo.png" alt="" type="logo-image-top">
+  <li type="top-list"><a href="/boutique/index">Home</a></li>
+  <li type="top-list"><a href="/boutique/assessment">Assessment</a></li>
+  <li type="top-list"><a href="/boutique/trainings">Training</a></li>
+  <li type="top-list"><a href="/boutique/calendar">Calendar</a></li>
+  <li type="top-list"><a href="/boutique/consulting">Consulting</a></li>
+  <input type="search" placeholder="Search..">
+  <img src="/static/boutique/images/profil.png" alt="" type="profil-image">
+</ul>
+
+
+
+<body>
+
+  <h2 type="left-title"> Upcoming courses </h2>
+
+  <div type="container">
+    <div type="left-container">
+    <input type="date" id="start" name="trip-start" value="2020-07-22" min="2020-01-01" max="2020-12-31">
+    <input type="search-class" placeholder="Search..">
+    <button type="show-all"> show all </button>
+    </div>
+
+    <div type="right-container">
+      <div type="course-container">
+        <img src="/static/boutique/images/course-logo.png" alt="" type="course-image">
+        <div type="course-description">
+          Title of the course <br>
+          Why does it ? <br>
+          location
+        </div>
+      </div>
+      <div type="course-container">
+        <img src="/static/boutique/images/course-logo.png" alt="" type="course-image">
+        <div type="course-description">
+          <p id="course-title">Title of the course </p> <br>
+          By <p id="course-teacher"> Steven phirt </p> on <p id="course-date"> date </p> <br>
+          <p id="course-location"> location </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div>
+    <ul footer=bottom>
+      <img src="/static/boutique/images/logo.png" alt="" type="logo-image-bottom">
+      <li type="bottom-list"><a onclick="aboutus()">About us</a></li>
+      <li type="bottom-list"><a onclick="contactus()">Contact us</a></li>
+      <li type="bottom-list"><a onclick="joinus()">Join us</a></li>
+      <li type="bottom-list" position="last"><a onclick="terms()">Terms & Conditions</a></li>
+      <img src="/static/boutique/images/twitter.png" alt="" type="social-image">
+      <img src="/static/boutique/images/instagram.png" alt="" type="social-image">
+      <img src="/static/boutique/images/facebook.png" alt="" type="social-image">
+    </ul>
+  </div>
+
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script>
+    function aboutus() {
+      swal("About Us", "EasyAgile is a company specialized in the sale of agile trainings. \nWe have more than 500 employee all around the world. Our teachers \
+have been working in the area of agile development for at least 5 years. ");
+    }
+
+    function contactus() {
+      swal("We'd love to hear from you !", "Whether you have a question about features, trials, pricing, need a demo, or anything else, our team is ready to answer all your questions. \n\
+    Write us at the address: easyagile@gmail.com");
+    }
+
+    function joinus() {
+      swal("Want to be a part of our adventure ?", "Join our team in Paris to help reshape the agile traning landscape and sell product that reach over 5 million customers worldwide!\n\
+    Write us at the address: easyagile@gmail.com");
+    }
+
+    function terms() {
+      var content = document.createElement('div');
+      content.innerHTML = 'Please read these terms and conditions of use carefully before accessing, using or obtaining any materials, information,\
+       products or services.\nBy accessing, the our website, you agree to be bound by these terms and conditions ("Terms") and our Privacy Policy.';
+      swal({
+        title: "Terms & Conditions",
+        content: content
+      });
+    }
+  </script>
+
+</body>
