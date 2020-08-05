@@ -206,6 +206,16 @@ div[type=review-text] {
   margin: 5%;
   word-wrap: break-word;
   white-space: break-spaces;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+div[type=review-text]:hover {
+  overflow: visible;
 }
 
 img[type=user-image] {

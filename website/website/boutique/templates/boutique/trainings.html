@@ -17,18 +17,63 @@
 
 <body>
   <div type=trainings-container>
-    <h2> Find your training </h2>
-    <div>
+    <h2> Find your training: </h2>
+
+    <div type="course-company">
+      <h1 type="course-name"> Scrum Alliance trainings </h1>
+      <p type="course-description"> All the new trainings from Scrum Alliance ! </p>
+
       {% if course_list %}
-      <ul>
-        {% for course in course_list %}
-        <li type="trainings"><a href="/boutique/course/{{ course.course_name }}/">{{ course }} </a></li>
-        {% endfor %}
-      </ul>
-      {% else %}
-      <p>No course are available.</p>
+      {% for course in course_list %}
+      {% if course.company == "scrum_alliance" %}
+      <div type="course-container">
+        <a href="/boutique/course/{{ course.course_name }}/">
+        <img src="/static/boutique/images/csm_image.png" alt="" type="course-logo">
+        <h4> {{course.course_name}} </h4>
+        </a>
+      </div>
+      {% endif %}
+      {% endfor %}
       {% endif %}
     </div>
+
+    <div type="course-company-blank">
+      <h1 type="course-name"> Scrum trainings </h1>
+      <p type="course-description"> All the new trainings from Scrum ! </p>
+
+      {% if course_list %}
+      {% for course in course_list %}
+      {% if course.company == "scrum" %}
+      <div type="course-container">
+        <a href="/boutique/course/{{ course.course_name }}/">
+        <img src="/static/boutique/images/scrum_image.png" alt="" type="course-logo">
+        <h4> {{course.course_name}} </h4>
+        </a>
+      </div>
+      {% endif %}
+      {% endfor %}
+      {% endif %}
+    </div>
+
+    <div type="course-company">
+      <h1 type="course-name"> Scaled Agile trainings </h1>
+      <p type="course-description"> All the new trainings from Scaled Agile ! </p>
+
+      {% if course_list %}
+      {% for course in course_list %}
+      {% if course.company == "scaled_agile" %}
+      <div type="course-container">
+        <a href="/boutique/course/{{ course.course_name }}/">
+        <img src="/static/boutique/images/safe_image.png" alt="" type="course-logo">
+        <h4> {{course.course_name}} </h4>
+        </a>
+      </div>
+      {% endif %}
+      {% endfor %}
+      {% endif %}
+    </div>
+
+
   </div>
 
   <div>
@@ -46,6 +91,12 @@
 
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script>
+    console.log({
+      {
+        course_list
+      }
+    })
+
     function aboutus() {
       swal("About Us", "EasyAgile is a company specialized in the sale of agile trainings. \nWe have more than 500 employee all around the world. Our teachers \
 have been working in the area of agile development for at least 5 years. ");

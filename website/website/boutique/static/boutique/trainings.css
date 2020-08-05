@@ -50,9 +50,54 @@ img[type=profil-image] {
 
 /*  TRAININGS */
 div[type=trainings-container] {
+  width: 100%;
   display: inline-block;
-  margin: 60px;
+  margin-top: 10px;
 }
+
+div[type=course-company] {
+  background-color: #daeaff;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+div[type=course-company-blank] {
+  width: 100%;
+  overflow: hidden;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+
+h1[type=course-name] {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+p[type=course-description] {
+  width: 100%;
+  text-align: center;
+  margin-top: 5px;
+}
+
+div[type=course-container] {
+  width: 20%;
+  float: left;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 6.6%;
+  margin-right: 6.6%;
+}
+
+img[type=course-logo] {
+  width: 35%;
+  align-self: center;
+}
+
 
 
 

@@ -10,6 +10,8 @@ class User(models.Model):
 
 class Course(models.Model):
     course_name = models.CharField(max_length=200)
+    company = models.CharField(max_length=200, default="Scrum Alliance Training")
+    logo = models.CharField(max_length=200, default="scrum.png")
     json = models.CharField(max_length=20000, null=True)
     instructor = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     def __str__(self):

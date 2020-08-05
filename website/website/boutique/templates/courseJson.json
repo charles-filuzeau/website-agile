@@ -1,10 +1,4 @@
-{
-  "description": "Little description of the course...",
-  "who_for": "This course is for people who want to know more about agile ....",
-  "what_in_it": "In this course, you will find ...",
-  "modules": [
-    ["Project planing", "This modude will teach you..."],
-    ["Team working", "This modude will teach you..."],
-    ["Agile dev", "This modude will teach you..."]
-  ]
-}
+{   "name":"Agile training", "description": "This is a description about the Agile Training. It is a great training of 20 hours",  "price":"$500", "who_for": "This course is for people who want to know more about the agile methodology. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",   "what_in_it": "In this course, you will find many information about the tools and skills required to work in an agile environment. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",   "category": "Scrum alliance trainings", "logo": "scrum.png", "modules": [     ["Project planing", "This module will teach you how to plan your agile project"],     ["Team working", "This module will teach you how to work with other people in agile projects"],     ["Agile dev", "This module will teach you how developers should implement an agile solution"]   ] }
+
+
+{   "name":"Scrum training", "description": "Little description of the course...",  "price":"$800",  "who_for": "This course is for people who want to know more about agile ....",   "what_in_it": "In this course, you will find ...", "category": "Scrum alliance trainings", "logo": "scrum.png",   "modules": [     ["Project planing", "This module will teach you..."],     ["Team working", "This module will teach you..."],     ["Agile dev", "This module will teach you..."]   ] }
