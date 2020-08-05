@@ -1,8 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-from .models import Course, User, Formation, Inspiration
-
+from .models import Course, User, Formation, Inspiration, CourseReview, CourseInstance
+import json
+import jsonpickle
 
 def index(request):
     user_list = User.objects.all()
@@ -26,7 +27,8 @@ def course(request, name):
     return render(request, 'boutique/course.html', context)
 
 def calendar(request):
-    context = {}
+    instances_list = CourseInstance.objects.all()
+    context = {'instances_list_wierd': jsonpickle.encode(instances_list, unpicklable=False), 'instances_list': instances_list}
     return render(request, 'boutique/calendar.html', context)
 
 def consulting(request):

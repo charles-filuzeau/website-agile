@@ -52,23 +52,53 @@ div[type=container] {
   width: 100%;
 }
 
-div[type=left-container] {
+h2[type=left-title] {
+  width: 30%;
   float: left;
-  width: 40%;
-  background-color: grey;
+}
+
+div[type=left-container] {
+  padding-top: 15px;
+  float: left;
+  width: 69%;
+}
+
+input[type=date] {
+  width: 20%;
+  float: left;
+  margin: 10px;
+}
+
+input[type=search-class] {
+  width: 20%;
+  float: left;
+  margin: 10px;
+}
+
+button[type=show-all] {
+  width: 20%;
+  float: left;
+  margin: 10px;
 }
 
 div[type=right-container] {
   float: left;
   width: 60%;
-  background-color: green;
+  margin-top: 20px;
+  margin-left: 19%;
+  margin-right: 19%;
+  border: solid 2px #ccc;
+  height: 400px;
+  overflow: scroll;
 }
 
 div[type=course-container] {
   width: 90%;
   height: 100px;
   margin: 5%;
-  background-color: red;
+  border: solid 2px #ccc;
+  border-radius: 20px;
+  background-color: #daeaff;
 }
 
 img[type=course-image] {
@@ -81,7 +111,6 @@ div[type=course-description] {
     width: 80%;
     margin-top: 10px;
     margin-left: 20px;
-
 }
 
 p {

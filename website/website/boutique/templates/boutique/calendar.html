@@ -22,30 +22,67 @@
 
   <div type="container">
     <div type="left-container">
-    <input type="date" id="start" name="trip-start" value="2020-07-22" min="2020-01-01" max="2020-12-31">
-    <input type="search-class" placeholder="Search..">
-    <button type="show-all"> show all </button>
+      <input class="calendar" type="date" id="start" name="trip-start" value="2020-07-22" min="2020-01-01" max="2020-12-31">
+      <input class="search_field" type="search-class" placeholder="Search.." onchange="SearchFunction(this.value)">
+      <button class="clear_button" type="show-all"> Clear filters </button>
     </div>
 
     <div type="right-container">
-      <div type="course-container">
+      {% if instances_list %}
+      <script>
+        const calendar = document.querySelector('.calendar');
+        calendar.addEventListener('change', (event) => {
+          const courses = document.querySelectorAll('.course');
+          courses.forEach(function(coursecontainer) {
+            if (coursecontainer.getAttribute('date') != event.target.value) {
+              coursecontainer.style.display = 'none'
+            } else {
+              coursecontainer.style.display = 'block'
+            }
+          })
+        });
+
+
+        function SearchFunction(value) {
+          const courses = document.querySelectorAll('.course');
+          const lower_value = value.toLowerCase();
+          courses.forEach(function(coursecontainer) {
+            if (coursecontainer.getAttribute('name').toLowerCase().includes(lower_value) ||
+            coursecontainer.getAttribute('location').toLowerCase().includes(lower_value)) {
+              coursecontainer.style.display = 'block'
+            } else {
+              coursecontainer.style.display = 'none'
+            }
+          })
+        }
+
+        const clear_button = document.querySelector('.clear_button');
+        clear_button.addEventListener('click', (event) => {
+          const courses = document.querySelectorAll('.course');
+          courses.forEach(function(coursecontainer) {
+            coursecontainer.style.display = 'block'
+          })
+        });
+
+      </script>
+      {% for instance in instances_list %}
+      <div class="course" type="course-container" name="{{instance.course.course_name}}" location="{{instance.location}}" date="{{instance.date|date:"Y-m-d"}}">
         <img src="/static/boutique/images/course-logo.png" alt="" type="course-image">
         <div type="course-description">
-          Title of the course <br>
-          Why does it ? <br>
-          location
+          <a href="/boutique/course/{{ instance.course.course_name }}/">
+            <p id="course-title"> {{instance.course.course_name}} </p>
+          </a> <br>
+          By <p id="course-teacher"> {{instance.course.instructor.user_name}} </p> on <p id="course-date"> {{instance.date}} </p> <br>
+          <p id="course-location"> {{instance.location}} </p>
         </div>
       </div>
-      <div type="course-container">
-        <img src="/static/boutique/images/course-logo.png" alt="" type="course-image">
-        <div type="course-description">
-          <p id="course-title">Title of the course </p> <br>
-          By <p id="course-teacher"> Steven phirt </p> on <p id="course-date"> date </p> <br>
-          <p id="course-location"> location </p>
-        </div>
-      </div>
+      {% endfor %}
+      {% else %}
+      <p>No course are available.</p>
+      {% endif %}
     </div>
   </div>
+
 
 
 
