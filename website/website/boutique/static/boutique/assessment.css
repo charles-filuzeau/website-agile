@@ -81,28 +81,33 @@ div[type=assessment-container] {
   border-width: 1px;
   border-color: grey;
   background-color: #daeaff;
+  height: 240px;
 }
 
 div[type=image-container] {
   float: left;
   border-radius: 10px;
-  height: 250px;
+  height: 100%;
   width: 30%;
   background-repeat: no-repeat;
   background-position: 100% 0;
   background-size: 100%;
 }
 
+div[service=leadership] {
+  background-image: url("/static/boutique/images/leadership.png");
+}
+
+div[service=team] {
+  background-image: url("/static/boutique/images/team.png");
+}
+
+div[service=devops] {
+  background-image: url("/static/boutique/images/assessment.png");
+}
+
 div[service=assessment] {
-  background-image: url("/static/boutique/images/assessment_image.png");
-}
-
-div[service=trainings] {
-  background-image: url("/static/boutique/images/trainings_image.png");
-}
-
-div[service=coaching] {
-  background-image: url("/static/boutique/images/coaching_image.png");
+  background-image: url("/static/boutique/images/devops.png");
 }
 
 div[type=text-container] {
@@ -110,7 +115,7 @@ div[type=text-container] {
   margin-left: 2%;
   margin-right: 2%;
   border-radius: 10px;
-  width: 65%;
+  width: 60%;
 }
 
 

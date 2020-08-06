@@ -99,7 +99,7 @@ div[type=border-div] {
 
 div[type=left-div] {
     float: left;
-    margin-left: 10%;
+    margin-left: 5%;
     width: 40%;
 }
 div[type=right-div] {
@@ -111,6 +111,11 @@ div[type=right-div] {
 h3[type=title-center] {
   width: 100%;
   text-align: center;
+}
+
+h2[type=title-left] {
+  width: 100%;
+  margin-left: 2%;
 }
 
 /* MODULES */
@@ -171,6 +176,14 @@ p[id=instructor-legend] {
 }
 
 /* REVIEWS */
+div[type=border-div] {
+  border-top-width: 1px;
+  border-top-color: grey;
+  border-top-style: solid;
+  margin-top: 50px;
+  display: flow-root;
+  clear: both;
+}
 div[type=get-inspired-container] {
   margin-bottom: 30px;
   overflow-x: scroll;
@@ -179,10 +192,12 @@ div[type=get-inspired-container] {
 }
 
 div[type=review-container] {
-  display: inline-block;
-  width: 40%;
+  display: inline-table;
+  width: 30%;
   border: solid 2px #ccc;
   border-radius: 10px;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
 div[type=review-text] {
@@ -191,6 +206,16 @@ div[type=review-text] {
   margin: 5%;
   word-wrap: break-word;
   white-space: break-spaces;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+div[type=review-text]:hover {
+  overflow: visible;
 }
 
 img[type=user-image] {
@@ -205,6 +230,7 @@ div[type=review-user] {
   margin-bottom: 5%;
   float: left;
 }
+
 
 
 /* BOTTOM FOTTER */

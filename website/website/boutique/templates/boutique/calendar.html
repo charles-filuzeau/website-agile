@@ -22,7 +22,7 @@
 
   <div type="container">
     <div type="left-container">
-      <input class="calendar" type="date" id="start" name="trip-start" value="2020-07-22" min="2020-01-01" max="2020-12-31">
+      <input class="calendar" type="date" id="start" name="trip-start" value="2020-08-06" min="2020-08-06" max="2020-12-31">
       <input class="search_field" type="search-class" placeholder="Search.." onchange="SearchFunction(this.value)">
       <button class="clear_button" type="show-all"> Clear filters </button>
     </div>
@@ -67,7 +67,7 @@
       </script>
       {% for instance in instances_list %}
       <div class="course" type="course-container" name="{{instance.course.course_name}}" location="{{instance.location}}" date="{{instance.date|date:"Y-m-d"}}">
-        <img src="/static/boutique/images/course-logo.png" alt="" type="course-image">
+        <img src="/static/boutique/images/{{instance.image_name}}.png" special="{{instance.image_name}}" type="course-image">
         <div type="course-description">
           <a href="/boutique/course/{{ instance.course.course_name }}/">
             <p id="course-title"> {{instance.course.course_name}} </p>

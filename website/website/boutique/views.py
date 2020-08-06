@@ -23,11 +23,12 @@ def trainings(request):
 def course(request, name):
     course = Course.objects.get(course_name=name)
     inspiration_list = Inspiration.objects.all()
-    context = {'course': course, 'inspiration_list' : inspiration_list}
+    course_reviews = CourseReview.objects.filter(course=course)
+    context = {'course': course, 'inspiration_list' : inspiration_list, 'course_reviews': course_reviews}
     return render(request, 'boutique/course.html', context)
 
 def calendar(request):
-    instances_list = CourseInstance.objects.all()
+    instances_list = CourseInstance.objects.order_by('date')
     context = {'instances_list_wierd': jsonpickle.encode(instances_list, unpicklable=False), 'instances_list': instances_list}
     return render(request, 'boutique/calendar.html', context)
 

@@ -42,7 +42,7 @@ class CourseReview(models.Model):
     text = models.CharField(max_length=500)
     pub_date = models.DateField('date published')
     def __str__(self):
-        return str(self.title) + ' ' + str(self.user)
+        return str(self.title) + ' ' + str(self.user) + ' | ' + str(self.course.course_name)
 
 class CourseInstance(models.Model):
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
